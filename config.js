@@ -1,13 +1,12 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  url: 'http://guilhermevrs.github.io/',
+  title: 'Guilherme Schwade',
+  subtitle: 'Because knowledge must be shared',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
   menu: [
     {
       label: 'Articles',
@@ -23,16 +22,12 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Guilherme Schwade',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: 'Developer, Scrum Master, Neuroscience...',
     contacts: {
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vkontakte: '#'
+      email: 'guilhermevrs@gmail.com',
+      github: 'guilhermevrs'
     }
   }
 };
