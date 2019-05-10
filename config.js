@@ -23,8 +23,8 @@ module.exports = {
   ],
   author: {
     name: 'Guilherme Schwade',
-    photo: '/photo.jpg',
-    bio: 'Developer, Scrum Master, Neuroscience...',
+    photo: '/my-photo.jpg',
+    bio: 'Development is much more than coding',
     contacts: {
       email: 'guilhermevrs@gmail.com',
       github: 'guilhermevrs'
