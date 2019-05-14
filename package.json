@@ -5,8 +5,8 @@
   "main": "n/a",
   "scripts": {
     "develop": "yarn run clean && gatsby develop",
-    "build": "yarn run clean && gatsby build",
-    "deploy": "yarn run clean && gatsby build --prefix-paths && gh-pages -d public -b master",
+    "build": "yarn run clean && gatsby build --prefix-paths && cp 404.html public/",
+    "deploy": "yarn build && gh-pages -d public -b master",
     "clean": "rimraf .cache public",
     "flow": "flow",
     "lint:js": "eslint --cache --ext .js,.jsx --ignore-pattern public .",
