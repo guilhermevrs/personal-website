@@ -17,7 +17,7 @@ export const PureAuthor = ({ data }: Object) => {
           rel="noopener noreferrer"
           target="_blank"
         >
-         Send <strong>{author.name}</strong> a mail
+         Send me a mail!
         </a>
       </p>
     </div>
