@@ -6,6 +6,7 @@ module.exports = {
   subtitle: 'Development is much more than coding',
   copyright: '© All rights reserved.',
   disqusShortname: 'guilhermevrs-github-io',
+  googleAnalyticsId: 'UA-140169580-1',
   postsPerPage: 4,
   menu: [
     {
