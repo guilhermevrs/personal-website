@@ -3,9 +3,9 @@
 module.exports = {
   url: 'http://guilhermevrs.github.io/',
   title: 'Guilherme Schwade',
-  subtitle: 'Because knowledge must be shared',
+  subtitle: 'Development is much more than coding',
   copyright: '© All rights reserved.',
-  disqusShortname: '',
+  disqusShortname: 'guilhermevrs-github-io',
   postsPerPage: 4,
   menu: [
     {
