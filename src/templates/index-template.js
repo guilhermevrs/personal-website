@@ -6,6 +6,7 @@ import Sidebar from '../components/Sidebar';
 import Feed from '../components/Feed';
 import Page from '../components/Page';
 import Pagination from '../components/Pagination';
+import NotFound from '../components/NotFound';
 
 type Props = {
   +data: Object,
@@ -28,11 +29,18 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 
   const { edges } = data.allMarkdownRemark;
   const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
+  let notFoundCmp;
+  if (typeof window !== 'undefined') {
+    if (/#404$/.test(window.location.hash)) {
+      notFoundCmp = <NotFound />;
+    }
+  }
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
       <Sidebar isIndex />
       <Page>
+        {notFoundCmp}
         <Feed edges={edges} />
         <Pagination
           prevPagePath={prevPagePath}
