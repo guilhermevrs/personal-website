@@ -7,5 +7,5 @@
   YARN_FLAGS = "--no-ignore-optional"
 [[redirects]]
   from = "/*"
-  to = "/404"
+  to = "/index.html#404"
   status = 200
