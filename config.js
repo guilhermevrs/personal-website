@@ -24,7 +24,8 @@ module.exports = {
     bio: 'Development is much more than coding',
     contacts: {
       email: 'guilhermevrs@gmail.com',
-      github: 'guilhermevrs'
+      github: 'guilhermevrs',
+      linkedin: 'guilhermeschwade'
     }
   }
 };
