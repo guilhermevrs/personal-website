@@ -3,7 +3,7 @@
 module.exports = {
   url: 'http://guilhermevrs.github.io',
   title: 'Guilherme Schwade',
-  subtitle: 'Development is much more than coding',
+  subtitle: 'Development is much more than just coding',
   copyright: '© All rights reserved.',
   disqusShortname: 'guilhermevrs-github-io',
   googleAnalyticsId: 'UA-140169580-1',
@@ -21,7 +21,7 @@ module.exports = {
   author: {
     name: 'Guilherme Schwade',
     photo: '/my-photo.jpg',
-    bio: 'Development is much more than coding',
+    bio: 'Development is much more than just coding',
     contacts: {
       email: 'guilhermevrs@gmail.com',
       github: 'guilhermevrs',
