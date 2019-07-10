@@ -54,6 +54,7 @@ export const Sidebar = (props: Props) => (
               contacts {
                 github
                 email
+                linkedin
               }
             }
           }
