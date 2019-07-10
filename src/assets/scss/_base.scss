@@ -4,3 +4,10 @@
 @import "~katex/dist/katex.min.css";
 @import "~prismjs/themes/prism-solarizedlight.css";
 @import "base/generic";
+
+.md-figure {
+    margin: 0 auto;
+    & > img {
+        margin: 0 auto;
+    }
+}
