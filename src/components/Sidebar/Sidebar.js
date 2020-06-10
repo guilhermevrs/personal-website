@@ -1,32 +1,32 @@
 // @flow
-import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import Author from './Author';
-import Contacts from './Contacts';
-import Copyright from './Copyright';
-import Menu from './Menu';
-import styles from './Sidebar.module.scss';
+import React from "react";
+import { graphql, StaticQuery, Link } from "gatsby";
+import Author from "./Author";
+import Contacts from "./Contacts";
+import Copyright from "./Copyright";
+import Menu from "./Menu";
+import styles from "./Sidebar.module.scss";
+
+import VersionSwitcher from "../VersionSwitcher";
 
 type Props = {
   +isIndex: ?boolean,
+  lang: ?string,
 };
 
 type PureProps = Props & {
   +data: Object,
 };
 
-export const PureSidebar = ({ data, isIndex }: PureProps) => {
-  const {
-    author,
-    copyright,
-    menu
-  } = data.site.siteMetadata;
+export const PureSidebar = ({ data, isIndex, lang = null, versionLinkSuffix = '' }: PureProps) => {
+  const { author, copyright, menu } = data.site.siteMetadata;
 
   return (
-    <div className={styles['sidebar']}>
-      <div className={styles['sidebar__inner']}>
+    <div className={styles["sidebar"]}>
+      <div className={styles["sidebar__inner"]}>
         <Author author={author} isIndex={isIndex} />
-        <Menu menu={menu} />
+        {versionLinkSuffix && <VersionSwitcher lang={lang} versionLinkSuffix={versionLinkSuffix}></VersionSwitcher>}
+        <Menu menu={menu.filter((m) => m.lang === lang)} />
         <Contacts contacts={author.contacts} />
         <Copyright copyright={copyright} />
       </div>
@@ -46,6 +46,7 @@ export const Sidebar = (props: Props) => (
             menu {
               label
               path
+              lang
             }
             author {
               name
@@ -53,7 +54,6 @@ export const Sidebar = (props: Props) => (
               bio
               contacts {
                 github
-                email
                 linkedin
               }
             }
@@ -61,7 +61,7 @@ export const Sidebar = (props: Props) => (
         }
       }
     `}
-    render={(data) => <PureSidebar {...props} data={data}/>}
+    render={(data) => <PureSidebar {...props} data={data} />}
   />
 );
 

@@ -16,7 +16,6 @@
 
   &__home-button {
     display: block;
-    max-width: 90px;
     height: $button-height;
     padding: 0 24px;
     line-height: $button-height;
@@ -39,6 +38,11 @@
 
 }
 
+.versionSwitch {
+  @include margin-top(1);
+  text-align: center;
+}
+
 @include breakpoint-md {
   .post {
     &__footer {
@@ -53,10 +57,18 @@
       position: fixed;
       max-width: auto;
       margin: 0;
-      top: 30px;
+      top: 70px;
       left: 30px
     }
 
+  }
+
+  .versionSwitch {
+    position: fixed;
+    max-width: auto;
+    margin: 0;
+    top: 30px;
+    left: 30px
   }
 
 }

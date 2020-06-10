@@ -1,6 +1,7 @@
 ---
 title: "About me"
 template: "page"
+slug: "/pages/about"
 ---
 
 Hi there!  
@@ -12,6 +13,7 @@ After working for quite a while now, I came to the conclusion that the developme
 
 That being said, I haved decided to write about it. Not that I am the new brazilian Steve Jobs or any guru of a sort. I am a normal guy, like you. I do work with this world, every week, like you probably do as well. I read stuff on the internet about this world, like you also do. Why should you read the articles then?
 
-Well, think about it like a talk over a coffee. I tell you stuff I have read, tested or worked on and you tell me you have already seen that stuff or that it made you think about a similar article. You may as well simply listen, perhaps think about the subject, do your own experiments. Who knows if you are not going to start a blog as well and it will be me reading your articles. Welcome to the knowledge sharing era.
+Well, think about it like a talk over a coffee. I tell you stuff I have read, tested or worked on and you tell me you have already seen that stuff or that it made you think about a similar article. You may as well simply listen, perhaps think about the subject, do your own experiments. Who knows if you are not going to start a blog as well and it will be me reading your articles. Welcome to the knowledge sharing era. This is blog is me trying to contribute to the community. Moving from pure consumer to producer status. And if I can unblock someone with my texts, great!
 
-PS: Some may argue why I don't write in Portuguese, my mother tongue. Well, I could, but I rather try the article in English first and, upon request, I can translate. Just drop me a comment!
+Anyway, if you don't want to read me anymore, that's ok. I write mainly to myself. I write to keep my mind going. To review my point of view, analysing the problem from other dimensions. From me to myself. The discovery of writting changed the game to humanity e it was about time for me to start.
+

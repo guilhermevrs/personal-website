@@ -2,7 +2,7 @@
 title: How I use the sprint velocity data in my team
 date: "2019-07-10T22:40:32.169Z"
 template: "post"
-draft: false
+draft: true
 slug: "/posts/scrum-team-velocity-chart/"
 category: "Agile"
 tags:
@@ -14,7 +14,7 @@ description: "This article describes how I manage and use the team velocity in t
 ## TL;DR Session
 
 * Velocity is not the holy grail, but a good indicator
-* Team velocity should be computed in average, pessimitic and optimistic
+* Team velocity should be computed in average, pessimitic and optimistic bounds
 * This data can be used prior the sprint start and for project forecast
 * A small excel file to compute your velocity [is shared here](#excel-gift)
 
@@ -26,19 +26,25 @@ Very often I searched for terms like:
 * How to adapt team velocity when team changes
 * How to have stable team velocity with vacations, sick leaves, blockers, etc...
 
-In the end of the day, what I was really searching for, was a magical number that would predict the impredictable and that I could use for mathematical equations and fancy graphs.
+In the end of the day, what I was really looking for was a magical number. Something that would predict the impredictable. More important, something that I could use for further equations and fancy graphs.
 
 ![Me trying to figure out what's the team's velocity for the next sprint when someone is on vacation](https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif)
 
-## Velocity is not a magical number
+## Why not the team capacity planning then?
 
-Some may argue that one shouldn't use velocity planning, but rather a capacity planning. To be honest, I have never really understood this argument due to two main flaws in it. First, by following this kind of planning, one should consider that person A does the exact same amount of work that person B in the same time space. 
+Were them the correct terms? Perhaps it was just my googling skils that were a bit rusty...
 
-This is hardly ever true, since skill levels are different among team members (person A may be more or less confortable in a specific domain than others). Second, even if you have the exact same skill levels in the team, the sizing of the user stories must be done in days. That is a major problem since you will still live with the impredictability. Who is going to work on this US? How many days this person is going to spend on it? How to measure the "unknown" part of the US? In other words, predict the impredictable.
+Some may argue that you shouldn't use velocity planning, but rather a capacity planning. The idea consists on agree upfront with the team how many days they intend to work in the next sprint (considering days off, holidays, etc). We sum up all those days and we obtain the team capacity. Then you kind of estimate the amount of work in hours for your tasks and get a grip of how much you will commit.
 
-As the name said, it's impredictable. It can't be predicted with 100% of confidence factor. Nothing can change that, even if you size your user stories with points and that you computed your velocity based on the average of delivered points of the last X sprints. What it gives you, though, is an indicator. Data that you will analyze, among other indicators. From this analysis, the team tries to build a confidence factor on what can and what can't be delivered.
+I have never really understood this argument due to two main flaws on it. First, by following this kind of planning, one should consider that person A does the exact same amount of work that person B in the same time. This is hardly ever true, since skill levels are different among team members (person A may be more or less confortable in a specific domain than others). Second, even if you have the exact same skill levels in the team, the sizing of the user stories must be done in real time. That is a major problem since you will still live with the impredictability. Who is going to work on this US? How many days this person is going to spend on it? How to measure the "unknown" part of the US? How to predict the impredictable?
 
-A good analogy is the gas tank light indicator in a car. If you are not used to the car (perhaps it's a rental), whenever the light goes on you don't feel confortable, you want to stop and look for the closest gas station. However, when you know well the car, you have been driving for a while, you know that even if the light goes on, you may drive a few miles until it goes dry. The car, in the example, it's your team. The gas tank light, the team velocity. At first, when it's a new team, you try to keep as close as possible to the velocity. But time passes, experience grows and the team gets a better picture on what it can deliver in the next sprint, considering not only the computed velocity, but the fact that John or Mary won't be there for the next week or the uncertain nature of the next tasks in the backlog for example.
+## Velocity is not a magical number either
+
+As the name said, it's impredictable. It can't be predicted with 100% of confidence factor. Nothing can change that, even if you size your user stories with points and that you computed your velocity based on the average of delivered points of the last X sprints. What it gives you, though, is an indicator. Data that you will analyze, among other indicators (like the team capacity for example). From this analysis, the team tries to build a confidence factor on what can and what can't be delivered.
+
+A good analogy is the gas tank light indicator in a car. If you are not used to the car (perhaps it's a rental), whenever the light goes on you don't feel confortable, you want to stop and look for the closest gas station. However, when you know well the car, you have been driving for a while, you know that even if the light goes on, you may drive a few miles until it goes dry. 
+
+The car, in the example, it's your team. The gas tank light, the team velocity. At first, when it's a new team, you try to keep as close as possible to the velocity. But time passes, experience grows and the team gets a better picture on what it can deliver in the next sprint. They start to consider not only the computed velocity, but the fact that John or Mary won't be there for the next week or the uncertain nature of the next tasks in the backlog for example.
 
 ![When the sprint backlog fills up close to the team velocity](/media/scrum-velocity/low-gas-tank.jpg)
 
@@ -50,7 +56,7 @@ Now that we consider the velocity as what it really is - an indicator - it's tim
 * Sprint N-2: 40 points
 * Sprint N-1: 15 points
 
-Team A velocity then, for sprint N, would be 40 points. Would you be confortable commiting to 45 points (As it is only 5 points more than the team's velocity)? What about exactly 40 then ? Hard, huh?
+Team A velocity then, for sprint N, would be 40 points. Would you be confortable commiting to 45 points (as it is only 5 points more than the team's velocity)? What about exactly 40 then ? Hard, huh?
 
 Let's say, now, that Team B performed as follow:
 
@@ -58,8 +64,7 @@ Let's say, now, that Team B performed as follow:
 * Sprint N-2: 40 points
 * Sprint N-1: 39 points
 
-Team B velocity is 40 points as well. Now would you be confortable commiting to 45? And 40? Not the same feeling right? Although both velocities are equal, the confidence it gives is not the same since the historical data collected are spread differently. Team B constantly delivered around 40 points, while Team B had it more spreaded.
-
+Team B velocity is 40 points as well. Now would you be confortable commiting to 45? And 40? Not the same feeling right? Although both velocities are equal, the confidence it gives is not the same since the historical data collected are spread differently. Team B constantly delivered around 40 points, while Team A had it more spreaded.
 To quantify this situation, the standard deviation fits well.
 
 The standard deviation is computed as follows:
@@ -72,12 +77,12 @@ Where:
 * ``X bar`` is the average of the sample
 * ``n`` is the number of observed data.
 
-In other words, it's the square root of the sum of the square difference between each data point and the average, divided by the number of data points. The standard deviation of the delivered points of Team A and B from the previous example are, respectivelly:
+The standard deviation of the delivered points of Team A and B from the previous example are, respectivelly:
 
 * Team A ~= ``20.4124``
 * Team B ~= ``0.8615``
 
-Taking the assumption that the data follows a normal distribution ([more on this distribution here](https://simple.wikipedia.org/wiki/Normal_distribution)), if you start from the average and stablish an upper and lower bound by adding and subtracting, respectively, the standard deviation, you can cover ``68.27%`` of the data points. One could create the upper and lower bound using the double of the standard deviation, which would contains ``95.45%``of the distribution. However, for empirical reasons I would advise against it.
+Taking the assumption that the data follows a normal distribution ([more on this distribution here](https://simple.wikipedia.org/wiki/Normal_distribution)), if you start from the average and stablish an upper and lower bound by adding and subtracting, respectively, the standard deviation, you can cover ``68.27%`` of the data points. One could create the upper and lower bound using the double of the standard deviation, which would contains ``95.45%``of the distribution. However, for empirical reasons I would advise against it on this exercise.
 
 ![Normal distribution](/media/scrum-velocity/normal-distribution.png)
 
@@ -91,7 +96,7 @@ Now that you have the upper and lower bound of your team's velocity, you can use
 
 ### When planning the next sprint
 
-During the Sprint Planning, the team gets together and, knowing their average velocity of 40 points, looks at the product backlog. Folowing the priority set by the Product Owner, the sum of the most important tasks points can be either 37 or 45 points. By only having the average, it's hard to get a good confidence factor. 
+During the Sprint Planning, the team gets together and, knowing their average velocity (le's say 40 points), looks at the product backlog. Folowing the priority set by the Product Owner, the sum of the most important tasks points can be between the lower and upper bound (let's consider 37 and 45 points respectively). By only having the average, it's hard to get a good confidence factor.
 
 One could blindly go always for the average velocity being the maximmun points the team can do during the sprint. In the example above, they would go for the 37 points, leaving the 8 points task out of the scope. From my experience, this has negative impacts on the team (we don't challenge ourselves to deliver more) and on the stakeholders (this feature we dropped was so close to be in progress).
 

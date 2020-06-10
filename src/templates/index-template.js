@@ -24,7 +24,8 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
     hasNextPage,
     hasPrevPage,
     prevPagePath,
-    nextPagePath
+    nextPagePath,
+    lang
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
@@ -38,15 +39,16 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
-      <Sidebar isIndex />
+      <Sidebar isIndex lang={lang} versionLinkSuffix="/" />
       <Page>
         {notFoundCmp}
-        <Feed edges={edges} />
+        <Feed edges={edges} lang={lang} />
         <Pagination
           prevPagePath={prevPagePath}
           nextPagePath={nextPagePath}
           hasPrevPage={hasPrevPage}
           hasNextPage={hasNextPage}
+          lang={lang}
         />
       </Page>
     </Layout>
@@ -54,7 +56,7 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 };
 
 export const query = graphql`
-  query IndexTemplate($postsLimit: Int!, $postsOffset: Int!) {
+  query IndexTemplate($postsLimit: Int!, $postsOffset: Int!, $lang: String) {
     site {
       siteMetadata {
         title
@@ -64,7 +66,7 @@ export const query = graphql`
     allMarkdownRemark(
         limit: $postsLimit,
         skip: $postsOffset,
-        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } },
+        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true }, lang: { eq: $lang } } },
         sort: { order: DESC, fields: [frontmatter___date] }
       ){
       edges {
@@ -78,7 +80,9 @@ export const query = graphql`
             date
             category
             description
+            lang
           }
+          timeToRead
         }
       }
     }
