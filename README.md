@@ -76,7 +76,7 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
 ```
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
-$ yarn
+$ npm install
 $ npm run develop
 ```
 To test the CMS locally, you'll need run a production build of the site:
