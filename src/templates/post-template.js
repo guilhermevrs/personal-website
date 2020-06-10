@@ -12,26 +12,23 @@ const PostTemplate = ({ data }) => {
   const {
     title: postTitle,
     description: postDescription
-  } = data.markdownRemark.frontmatter;
+  } = data.thisPost.frontmatter;
 
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
-      <Post post={data.markdownRemark} />
+      <Post post={data.thisPost} otherLanguages={data.otherLanguages} />
     </Layout>
   );
 };
 
 export const query = graphql`
-  query PostBySlug($slug: String!) {
+  query PostBySlug($slug: String!, $fileDirName: String!, $lang: String) {
     site {
       siteMetadata {
         author {
           name
-          contacts {
-            email
-          }
         }
         disqusShortname
         subtitle
@@ -39,18 +36,27 @@ export const query = graphql`
         url
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    thisPost: markdownRemark(fields: { slug: { eq: $slug } }, frontmatter: { lang: { eq: $lang } }) {
       id
       html
       fields {
         slug
         tagSlugs
       }
+      timeToRead
       frontmatter {
         date
+        lastUpdate
         description
         tags
         title
+        lang
+      }
+    }
+    otherLanguages: markdownRemark(frontmatter: {lang: {ne: $lang}}, fileAbsolutePath: {glob: $fileDirName}) {
+      id
+      fields{
+        slug
       }
     }
   }

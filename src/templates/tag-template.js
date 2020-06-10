@@ -14,11 +14,13 @@ const TagTemplate = ({ data, pageContext }) => {
 
   const {
     tag,
+    normalizedTag,
     currentPage,
     prevPagePath,
     nextPagePath,
     hasPrevPage,
-    hasNextPage
+    hasNextPage,
+    lang
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
@@ -26,14 +28,15 @@ const TagTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
-      <Sidebar />
+      <Sidebar lang={lang} versionLinkSuffix={`/tag/${normalizedTag}`} />
       <Page title={tag}>
-        <Feed edges={edges} />
+        <Feed edges={edges} lang={lang} />
         <Pagination
           prevPagePath={prevPagePath}
           nextPagePath={nextPagePath}
           hasPrevPage={hasPrevPage}
           hasNextPage={hasNextPage}
+          lang={lang}
         />
       </Page>
     </Layout>
@@ -41,7 +44,7 @@ const TagTemplate = ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query TagPage($tag: String, $postsLimit: Int!, $postsOffset: Int!) {
+  query TagPage($tag: String, $postsLimit: Int!, $postsOffset: Int!, $lang: String) {
     site {
       siteMetadata {
         title
@@ -51,7 +54,7 @@ export const query = graphql`
     allMarkdownRemark(
         limit: $postsLimit,
         skip: $postsOffset,
-        filter: { frontmatter: { tags: { in: [$tag] }, template: { eq: "post" }, draft: { ne: true } } },
+        filter: { frontmatter: { tags: { in: [$tag] }, template: { eq: "post" }, draft: { ne: true }, lang: { eq: $lang } } },
         sort: { order: DESC, fields: [frontmatter___date] }
       ){
       edges {

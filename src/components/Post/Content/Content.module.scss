@@ -15,7 +15,13 @@
     text-align: center;
     @include line-height(1.65);
     @include margin-top(1);
-    @include margin-bottom(0)
+    margin-bottom: 0;
+  }
+
+  &__meta {
+    text-align: center;
+    font-style: italic;
+    margin: 0;
   }
 
   &__body {
@@ -66,7 +72,6 @@
       font-size: $typographic-base-font-size * 3;
       @include line-height(2.25);
       @include margin-top(2.25);
-      @include margin-bottom(1.5)
     }
 
     &__body {

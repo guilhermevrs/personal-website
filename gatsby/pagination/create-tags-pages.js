@@ -4,14 +4,14 @@ const _ = require('lodash');
 const path = require('path');
 const siteConfig = require('../../config.js');
 
-module.exports = async (graphql, actions) => {
+module.exports = async (graphql, actions, lang) => {
   const { createPage } = actions;
   const { postsPerPage } = siteConfig;
 
   const result = await graphql(`
-    {
+    query tagQuery($lang: String) {
       allMarkdownRemark(
-        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true }, lang: { eq: $lang } } }
       ) {
         group(field: frontmatter___tags) {
           fieldValue
@@ -19,11 +19,13 @@ module.exports = async (graphql, actions) => {
         }
       }
     }
-  `);
+  `, { lang });
 
   _.each(result.data.allMarkdownRemark.group, (tag) => {
     const numPages = Math.ceil(tag.totalCount / postsPerPage);
-    const tagSlug = `/tag/${_.kebabCase(tag.fieldValue)}`;
+    const normalizedTag = _.kebabCase(tag.fieldValue);
+    const langPath = lang ? `/${lang}` : '';
+    const tagSlug = `${langPath}/tag/${normalizedTag}`;
 
     for (let i = 0; i < numPages; i += 1) {
       createPage({
@@ -31,13 +33,15 @@ module.exports = async (graphql, actions) => {
         component: path.resolve('./src/templates/tag-template.js'),
         context: {
           tag: tag.fieldValue,
+          normalizedTag,
           currentPage: i,
           postsLimit: postsPerPage,
           postsOffset: i * postsPerPage,
           prevPagePath: i <= 1 ? tagSlug : `${tagSlug}/page/${i - 1}`,
           nextPagePath: `${tagSlug}/page/${i + 1}`,
           hasPrevPage: i !== 0,
-          hasNextPage: i !== numPages - 1
+          hasNextPage: i !== numPages - 1,
+          lang
         }
       });
     }
