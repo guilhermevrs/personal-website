@@ -2,5 +2,9 @@
     "cSpell.words": [
         "velocities"
     ],
-    "cSpell.enabled": false
+    "cSpell.enabled": true,
+    "cSpell.enableFiletypes": [
+        "markdown"
+    ],
+    "cSpell.language": "pt,pt-BR,en"
 }

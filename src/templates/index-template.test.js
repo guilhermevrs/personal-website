@@ -5,7 +5,7 @@ import IndexTemplate from './index-template';
 describe('IndexTemplate', () => {
   const props = {
     data: {
-      allMarkdownRemark: {
+      allMdx: {
         edges: [
           {
             node: {

@@ -10,7 +10,7 @@ module.exports = async (graphql, actions, lang) => {
 
   const result = await graphql(`
     query tagQuery($lang: String) {
-      allMarkdownRemark(
+      allMdx(
         filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true }, lang: { eq: $lang } } }
       ) {
         group(field: frontmatter___tags) {
@@ -21,7 +21,7 @@ module.exports = async (graphql, actions, lang) => {
     }
   `, { lang });
 
-  _.each(result.data.allMarkdownRemark.group, (tag) => {
+  _.each(result.data.allMdx.group, (tag) => {
     const numPages = Math.ceil(tag.totalCount / postsPerPage);
     const normalizedTag = _.kebabCase(tag.fieldValue);
     const langPath = lang ? `/${lang}` : '';

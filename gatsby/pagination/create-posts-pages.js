@@ -10,7 +10,7 @@ module.exports = async (graphql, actions, lang = null) => {
   const result = await graphql(
     `
     query indexQuery($lang: String) {
-      allMarkdownRemark(
+      allMdx(
         filter: {
           frontmatter: {
             template: { eq: "post" }
@@ -28,7 +28,7 @@ module.exports = async (graphql, actions, lang = null) => {
 
   const { postsPerPage } = siteConfig;
   const numPages = Math.ceil(
-    result.data.allMarkdownRemark.totalCount / postsPerPage
+    result.data.allMdx.totalCount / postsPerPage
   );
 
   for (let i = 0; i < numPages; i += 1) {

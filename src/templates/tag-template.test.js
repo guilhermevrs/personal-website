@@ -5,7 +5,7 @@ import TagTemplate from './tag-template';
 describe('TagTemplate', () => {
   const props = {
     data: {
-      allMarkdownRemark: {
+      allMdx: {
         group: [
           {
             fieldValue: 'test_0',

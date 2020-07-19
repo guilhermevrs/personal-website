@@ -11,7 +11,7 @@ describe('PostTemplate', () => {
           subtitle: 'test'
         }
       },
-      markdownRemark: {
+      mdx: {
         html: '<p>test</p>',
         fields: {
           tagSlugs: [

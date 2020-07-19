@@ -4,6 +4,8 @@ import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Page from '../components/Page';
 
+import { MDXRenderer } from "gatsby-plugin-mdx";
+
 const PageTemplate = ({ data, pageContext }) => {
   const {
     title: siteTitle,
@@ -15,8 +17,6 @@ const PageTemplate = ({ data, pageContext }) => {
     description: pageDescription
   } = data.thisPost.frontmatter;
 
-  const { html: pageBody } = data.thisPost;
-
   const { lang } = pageContext;
   const slug = data.otherLanguages ? data.otherLanguages.fields.slug : undefined;
 
@@ -26,7 +26,7 @@ const PageTemplate = ({ data, pageContext }) => {
     <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription}>
       <Sidebar lang={lang} versionLinkSuffix={slug} />
       <Page title={pageTitle}>
-        <div dangerouslySetInnerHTML={{ __html: pageBody }} />
+        <MDXRenderer>{data.thisPost.body}</MDXRenderer>
       </Page>
     </Layout>
   );
@@ -40,9 +40,9 @@ export const query = graphql`
         subtitle
       }
     }
-    thisPost: markdownRemark(fields: { slug: { eq: $slug } }, frontmatter: { lang: { eq: $lang } }) {
+    thisPost: mdx(fields: { slug: { eq: $slug } }, frontmatter: { lang: { eq: $lang } }) {
       id
-      html
+      body
       frontmatter {
         title
         date
@@ -50,7 +50,7 @@ export const query = graphql`
         lang
       }
     }
-    otherLanguages: markdownRemark(frontmatter: {lang: {ne: $lang}}, fileAbsolutePath: {glob: $fileDirName}) {
+    otherLanguages: mdx(frontmatter: {lang: {ne: $lang}}, fileAbsolutePath: {glob: $fileDirName}) {
       id
       fields{
         slug

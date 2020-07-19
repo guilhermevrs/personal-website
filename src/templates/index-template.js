@@ -28,7 +28,7 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
     lang
   } = pageContext;
 
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMdx;
   const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
   let notFoundCmp;
   if (typeof window !== 'undefined') {
@@ -63,7 +63,7 @@ export const query = graphql`
         subtitle
       }
     }
-    allMarkdownRemark(
+    allMdx(
         limit: $postsLimit,
         skip: $postsOffset,
         filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true }, lang: { eq: $lang } } },

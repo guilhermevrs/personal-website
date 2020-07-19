@@ -23,7 +23,7 @@ const CategoryTemplate = ({ data, pageContext }) => {
     lang
   } = pageContext;
 
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMdx;
   const pageTitle = currentPage > 0 ? `${category} - Page ${currentPage} - ${siteTitle}` : `${category} - ${siteTitle}`;
 
   return (
@@ -50,7 +50,7 @@ export const query = graphql`
         subtitle
       }
     }
-    allMarkdownRemark(
+    allMdx(
         limit: $postsLimit,
         skip: $postsOffset,
         filter: { frontmatter: { category: { eq: $category }, template: { eq: "post" }, draft: { ne: true }, lang: { eq: $lang } } },
