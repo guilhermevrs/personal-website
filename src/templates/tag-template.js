@@ -23,7 +23,7 @@ const TagTemplate = ({ data, pageContext }) => {
     lang
   } = pageContext;
 
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMdx;
   const pageTitle = currentPage > 0 ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}` : `All Posts tagged as "${tag}" - ${siteTitle}`;
 
   return (
@@ -51,7 +51,7 @@ export const query = graphql`
         subtitle
       }
     }
-    allMarkdownRemark(
+    allMdx(
         limit: $postsLimit,
         skip: $postsOffset,
         filter: { frontmatter: { tags: { in: [$tag] }, template: { eq: "post" }, draft: { ne: true }, lang: { eq: $lang } } },

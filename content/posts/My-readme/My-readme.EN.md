@@ -2,7 +2,7 @@
 title: README
 date: "2019-07-10T22:40:32.169Z"
 template: "post"
-draft: false
+draft: true
 slug: "/posts/readme/"
 category: "Agile"
 tags:

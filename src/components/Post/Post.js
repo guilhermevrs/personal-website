@@ -10,7 +10,7 @@ import styles from "./Post.module.scss";
 const Post = ({ post, otherLanguages = null }) => {
   const { tags, title, date, lang = null, lastUpdate = null } = post.frontmatter;
 
-  const { html } = post;
+  const { body } = post;
   const { tagSlugs } = post.fields;
   const slug = otherLanguages ? otherLanguages.fields.slug : null;
 
@@ -28,7 +28,7 @@ const Post = ({ post, otherLanguages = null }) => {
       </Link>
 
       <div className={styles["post__content"]}>
-        <Content body={html} title={title} timeToRead={post.timeToRead} lang={lang} />
+        <Content body={body} title={title} timeToRead={post.timeToRead} lang={lang} />
       </div>
 
       <div className={styles["post__footer"]}>

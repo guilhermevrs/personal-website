@@ -5,7 +5,7 @@ import PageTemplate from './page-template';
 describe('PageTemplate', () => {
   const props = {
     data: {
-      markdownRemark: {
+      mdx: {
         html: '<p>test</p>',
         frontmatter: {
           title: 'test',

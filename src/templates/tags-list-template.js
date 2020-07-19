@@ -10,7 +10,7 @@ const TagsListTemplate = ({ data }) => {
     title,
     subtitle
   } = data.site.siteMetadata;
-  const { group } = data.allMarkdownRemark;
+  const { group } = data.allMdx;
 
   return (
     <Layout title={`Tags - ${title}`} description={subtitle}>
@@ -38,7 +38,7 @@ export const query = graphql`
         subtitle
       }
     }
-    allMarkdownRemark(
+    allMdx(
       filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
     ) {
       group(field: frontmatter___tags) {

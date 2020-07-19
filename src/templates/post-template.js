@@ -36,9 +36,9 @@ export const query = graphql`
         url
       }
     }
-    thisPost: markdownRemark(fields: { slug: { eq: $slug } }, frontmatter: { lang: { eq: $lang } }) {
+    thisPost: mdx(fields: { slug: { eq: $slug } }, frontmatter: { lang: { eq: $lang } }) {
       id
-      html
+      body
       fields {
         slug
         tagSlugs
@@ -53,7 +53,7 @@ export const query = graphql`
         lang
       }
     }
-    otherLanguages: markdownRemark(frontmatter: {lang: {ne: $lang}}, fileAbsolutePath: {glob: $fileDirName}) {
+    otherLanguages: mdx(frontmatter: {lang: {ne: $lang}}, fileAbsolutePath: {glob: $fileDirName}) {
       id
       fields{
         slug
