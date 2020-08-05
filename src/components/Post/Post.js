@@ -3,15 +3,13 @@ import { Link } from "gatsby";
 import Author from "./Author";
 import Content from "./Content";
 import Meta from "./Meta";
-import Tags from "./Tags";
 import VersionSwitcher from "../VersionSwitcher";
 import styles from "./Post.module.scss";
 
 const Post = ({ post, otherLanguages = null }) => {
-  const { tags, title, date, lang = null, lastUpdate = null } = post.frontmatter;
+  const { title, date, lang = null, lastUpdate = null } = post.frontmatter;
 
   const { body } = post;
-  const { tagSlugs } = post.fields;
   const slug = otherLanguages ? otherLanguages.fields.slug : null;
 
   const allArticlesProp = lang
@@ -33,7 +31,6 @@ const Post = ({ post, otherLanguages = null }) => {
 
       <div className={styles["post__footer"]}>
         <Meta date={date} lang={lang} lastUpdate={lastUpdate} />
-        <Tags tags={tags} tagSlugs={tagSlugs} lang={lang} />
         <Author lang={lang} />
       </div>
     </div>
