@@ -10,7 +10,7 @@ Eu sou o Guilherme
 
 ![It's a me!](/about.jpeg "It's a me!")
 
-Depois de ter trabalhado por um tempo já, eu cheguei a conclusão que o mundo do desenvolvimento em TI não é limitado a algoritmos e programação. Claro que fazem parte de uma grande parcela, mas não devemos neglicenciar todos os outros aspectos que orbitam em torno. Como na astronomia, onde planetas não são o único assunto discutido, mas compartilham os holofotes com estrelas, galáxias, buracos negros e muitos outros. Desenvolvimento também envolve performance, usabilidade, comunicação, métodos de trabalho com outros (humanos ou não) entre outros.
+Depois de ter trabalhado por um tempo já, eu cheguei a conclusão que o mundo do desenvolvimento em TI não é limitado a algoritmos e programação. Claro que fazem parte de uma grande parcela, mas não se deve neglicenciar todos os outros aspectos que orbitam em torno. Como na astronomia, onde planetas não são o único assunto discutido, mas compartilham os holofotes com estrelas, galáxias, buracos negros e muitos outros. Desenvolvimento também envolve performance, usabilidade, comunicação, métodos de trabalho, entre outros.
 
 Dito isso, decidi começar a escrever sobre o assunto. Não sou a versão brasileira de Steve Jobs ou qualquer outro tipo de guru. Sou um cara normal, como você. Eu trabalho nesse mundo, toda semana, como possivelmente você também. Eu leio outros artigos sobre esse ecosistema, da mesma forma que você também. Por quê, então, ler minhas postagens?
 
