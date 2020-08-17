@@ -2,6 +2,7 @@
 
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
+const emoji = require('remark-emoji');
 
 module.exports = {
   siteMetadata: {
@@ -36,7 +37,7 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: 'gatsby-plugin-feed-mdx',
       options: {
         query: `
           {
@@ -50,8 +51,8 @@ module.exports = {
           }
         `,
         feeds: [{
-          serialize: ({ query: { site, allMarkdownRemark } }) => (
-            allMarkdownRemark.edges.map((edge) => Object.assign({}, edge.node.frontmatter, {
+          serialize: ({ query: { site, allMdx } }) => (
+            allMdx.edges.map((edge) => Object.assign({}, edge.node.frontmatter, {
               description: edge.node.frontmatter.description,
               date: edge.node.frontmatter.date,
               url: site.siteMetadata.site_url + edge.node.fields.slug,
@@ -61,7 +62,7 @@ module.exports = {
           ),
           query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] },
                   filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
@@ -89,9 +90,19 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-react-svg',
       options: {
-        plugins: [
+        rule: {
+          include: /assets/
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+        remarkPlugins: [emoji],
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-katex',
             options: {
@@ -142,7 +153,7 @@ module.exports = {
           {
             site {
               siteMetadata {
-                url
+                siteUrl: url
               }
             }
             allSitePage(
@@ -160,7 +171,7 @@ module.exports = {
         `,
         output: '/sitemap.xml',
         serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
-          url: site.siteMetadata.url + edge.node.path,
+          url: site.siteMetadata.siteUrl + edge.node.path,
           changefreq: 'daily',
           priority: 0.7
         }))

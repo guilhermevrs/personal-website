@@ -11,11 +11,21 @@ module.exports = {
   menu: [
     {
       label: 'Articles',
-      path: '/'
+      path: '/',
     },
     {
       label: 'About me',
       path: '/pages/about'
+    },
+    {
+      label: 'Artigos',
+      path: '/pt/',
+      lang: 'pt'
+    },
+    {
+      label: 'Sobre mim',
+      path: '/pt/pages/sobre-mim',
+      lang: 'pt'
     }
   ],
   author: {
@@ -23,7 +33,6 @@ module.exports = {
     photo: '/my-photo.jpg',
     bio: 'Development is much more than just coding',
     contacts: {
-      email: 'guilhermevrs@gmail.com',
       github: 'guilhermevrs',
       linkedin: 'guilhermeschwade'
     }

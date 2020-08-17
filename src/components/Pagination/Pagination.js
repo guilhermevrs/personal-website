@@ -10,7 +10,8 @@ const Pagination = ({
   prevPagePath,
   nextPagePath,
   hasNextPage,
-  hasPrevPage
+  hasPrevPage,
+  lang = null
 }) => {
   const prevClassName = cx({
     'pagination__prev-link': true,
@@ -22,13 +23,15 @@ const Pagination = ({
     'pagination__next-link--disable': !hasNextPage
   });
 
+  const paginationLabels = lang ? PAGINATION[lang] : PAGINATION.default;
+
   return (
     <div className={styles['pagination']}>
       <div className={styles['pagination__prev']}>
-        <Link rel="prev" to={prevPagePath} className={prevClassName}>{PAGINATION.PREV_PAGE}</Link>
+        <Link rel="prev" to={prevPagePath} className={prevClassName}>{paginationLabels.PREV_PAGE}</Link>
       </div>
       <div className={styles['pagination__next']}>
-        <Link rel="next" to={nextPagePath} className={nextClassName}>{PAGINATION.NEXT_PAGE}</Link>
+        <Link rel="next" to={nextPagePath} className={nextClassName}>{paginationLabels.NEXT_PAGE}</Link>
       </div>
     </div>
   );

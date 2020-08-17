@@ -1,7 +1,6 @@
 # Netlify commands
 [build]
   publish = "public"
-  command = "yarn build"
+  command = "npm run build"
 [build.environment]
-  YARN_VERSION = "1.3.2"
-  YARN_FLAGS = "--no-ignore-optional"
+  NODE_OPTIONS = "--max_old_space_size=4096"

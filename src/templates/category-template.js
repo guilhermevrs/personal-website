@@ -14,19 +14,21 @@ const CategoryTemplate = ({ data, pageContext }) => {
 
   const {
     category,
+    normalizedCategory,
     currentPage,
     prevPagePath,
     nextPagePath,
     hasPrevPage,
     hasNextPage,
+    lang
   } = pageContext;
 
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMdx;
   const pageTitle = currentPage > 0 ? `${category} - Page ${currentPage} - ${siteTitle}` : `${category} - ${siteTitle}`;
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
-      <Sidebar />
+      <Sidebar lang={lang} versionLinkSuffix={`/category/${normalizedCategory}`} />
       <Page title={category}>
         <Feed edges={edges} />
         <Pagination
@@ -41,17 +43,17 @@ const CategoryTemplate = ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query CategoryPage($category: String, $postsLimit: Int!, $postsOffset: Int!) {
+  query CategoryPage($category: String, $postsLimit: Int!, $postsOffset: Int!, $lang: String) {
     site {
       siteMetadata {
         title
         subtitle
       }
     }
-    allMarkdownRemark(
+    allMdx(
         limit: $postsLimit,
         skip: $postsOffset,
-        filter: { frontmatter: { category: { eq: $category }, template: { eq: "post" }, draft: { ne: true } } },
+        filter: { frontmatter: { category: { eq: $category }, template: { eq: "post" }, draft: { ne: true }, lang: { eq: $lang } } },
         sort: { order: DESC, fields: [frontmatter___date] }
       ){
       edges {

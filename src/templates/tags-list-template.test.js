@@ -5,7 +5,7 @@ import TagsListTemplate from './tags-list-template';
 describe('TagsListTemplate', () => {
   const props = {
     data: {
-      allMarkdownRemark: {
+      allMdx: {
         group: [
           {
             fieldValue: 'test_0',

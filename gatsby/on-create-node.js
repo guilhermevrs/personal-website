@@ -9,7 +9,7 @@ const onCreateNode = ({ node, actions, getNode }) => {
 
   fmImagesToRelative(node);
 
-  if (node.internal.type === 'MarkdownRemark') {
+  if (node.internal.type === 'Mdx') {
     if (typeof node.frontmatter.slug !== 'undefined') {
       createNodeField({
         node,

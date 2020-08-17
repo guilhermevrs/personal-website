@@ -5,7 +5,7 @@ import CategoriesListTemplate from './categories-list-template';
 describe('CategoriesListTemplate', () => {
   const props = {
     data: {
-      allMarkdownRemark: {
+      allMdx: {
         group: [
           {
             fieldValue: 'test_0',
