@@ -1,0 +1,13 @@
+@import '../../../assets/scss/variables';
+
+.quote {
+    width: 100%;
+    border-top: solid 3px $color-primary;
+    border-bottom: solid 3px $color-primary;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    font-style: normal;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
