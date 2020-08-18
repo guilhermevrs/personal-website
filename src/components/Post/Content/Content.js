@@ -6,8 +6,9 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Mermaid from '../Mermaid';
+import Quote from '../Quote';
 
-const shortcodes = { Mermaid };
+const shortcodes = { Mermaid, Quote };
 
 const pluralizedTime = (lang, minutes) => {
   const singular = lang === 'pt'? 'minuto' : 'minute';
