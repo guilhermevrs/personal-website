@@ -4,7 +4,8 @@
     ],
     "cSpell.enabled": true,
     "cSpell.enableFiletypes": [
-        "markdown"
+        "markdown",
+        "mdx"
     ],
     "cSpell.language": "pt,pt-BR,en"
 }
