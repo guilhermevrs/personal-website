@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'http://guilhermevrs.github.io',
+  url: 'http://www.guilhermevrs.me',
   title: 'Guilherme Schwade',
   subtitle: 'Development is much more than just coding',
   copyright: '© All rights reserved.',
