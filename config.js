@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-  url: 'http://www.guilhermevrs.me',
-  title: 'Guilherme Schwade',
+  url: 'https://www.guilhermevrs.me',
+  title: 'Guilherme Vieira Schwade',
   subtitle: 'Development is much more than just coding',
   copyright: '© All rights reserved.',
   disqusShortname: 'guilhermevrs-github-io',
@@ -29,7 +29,7 @@ module.exports = {
     }
   ],
   author: {
-    name: 'Guilherme Schwade',
+    name: 'Guilherme Vieira Schwade',
     photo: '/my-photo.jpg',
     bio: 'Development is much more than just coding',
     contacts: {
