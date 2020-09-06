@@ -8,7 +8,6 @@ const Layout = ({ children, title, description }) => (
       <html lang="en" />
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content="Guilherme Schwade development management leadership skills effective managing expertise time strategies" />
     </Helmet>
     {children}
   </div>
