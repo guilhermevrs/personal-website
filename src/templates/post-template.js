@@ -11,13 +11,14 @@ const PostTemplate = ({ data }) => {
 
   const {
     title: postTitle,
-    description: postDescription
+    description: postDescription,
+    keywords: postKeywords
   } = data.thisPost.frontmatter;
 
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
 
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription}>
+    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} keywords={postKeywords}>
       <Post post={data.thisPost} otherLanguages={data.otherLanguages} />
     </Layout>
   );
@@ -51,6 +52,7 @@ export const query = graphql`
         tags
         title
         lang
+        keywords
       }
     }
     otherLanguages: mdx(frontmatter: {lang: {ne: $lang}}, fileAbsolutePath: {glob: $fileDirName}) {
