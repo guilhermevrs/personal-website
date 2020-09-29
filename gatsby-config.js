@@ -191,6 +191,12 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://www.guilhermevrs.me',
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-sass',

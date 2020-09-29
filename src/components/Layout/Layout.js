@@ -7,6 +7,7 @@ const Layout = ({ children, title, description, keywords }) => (
     <Helmet>
       <html lang="en" />
       <title>{title}</title>
+      <link rel="canonical" href="" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
     </Helmet>
