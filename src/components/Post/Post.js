@@ -30,7 +30,7 @@ const Post = ({ post, url, otherLanguages = null }) => {
       </div>
 
       <div className={styles["post__footer"]}>
-        <Meta date={date} lang={lang} share={`${url}${post.fields.slug}`} lastUpdate={lastUpdate} />
+        <Meta date={date} title={title} lang={lang} share={`${url}${post.fields.slug}`} lastUpdate={lastUpdate} />
         <Author lang={lang} />
       </div>
     </div>
