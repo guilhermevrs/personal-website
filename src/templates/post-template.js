@@ -12,13 +12,14 @@ const PostTemplate = ({ data }) => {
   const {
     title: postTitle,
     description: postDescription,
-    keywords: postKeywords
+    keywords: postKeywords,
+    lang
   } = data.thisPost.frontmatter;
 
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
 
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} keywords={postKeywords}>
+    <Layout title={`${postTitle} - ${siteTitle}`} lang={lang} description={metaDescription} keywords={postKeywords}>
       <Post post={data.thisPost} url={data.site.siteMetadata.url} otherLanguages={data.otherLanguages} />
     </Layout>
   );
