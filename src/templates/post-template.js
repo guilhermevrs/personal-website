@@ -51,6 +51,7 @@ export const query = graphql`
         lastUpdate
         description
         tags
+        ogImage
         title
         lang
         keywords
