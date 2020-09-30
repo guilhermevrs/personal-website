@@ -2,6 +2,7 @@
 
 module.exports = {
   url: 'https://www.guilhermevrs.me',
+  sitemap: '/sitemap.xml',
   title: 'Guilherme Vieira Schwade',
   subtitle: 'Development is much more than just coding',
   copyright: '© All rights reserved.',
