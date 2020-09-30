@@ -5,7 +5,7 @@
   "main": "n/a",
   "scripts": {
     "develop": "npm run clean && gatsby develop",
-    "build": "npm run clean && GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "deploy": "npm build && gh-pages -d public -b master",
     "clean": "rimraf .cache public",
     "flow": "flow",
