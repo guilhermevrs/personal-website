@@ -4,6 +4,11 @@ const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
 const emoji = require('remark-emoji');
 
+const {
+  NODE_ENV,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+
 module.exports = {
   siteMetadata: {
     url: siteConfig.url,
@@ -169,7 +174,7 @@ module.exports = {
             }
           }
         `,
-        output: '/sitemap.xml',
+        output: siteConfig.sitemap,
         serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
           url: site.siteMetadata.siteUrl + edge.node.path,
           changefreq: 'daily',
@@ -194,8 +199,31 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://www.guilhermevrs.me',
+        siteUrl: siteConfig.url,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            host: siteConfig.url,
+            sitemap: `${siteConfig.url}${siteConfig.sitemap}`,
+            policy: [{ userAgent: '*', allow: '/' }]
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
     },
     'gatsby-plugin-react-helmet',
     {

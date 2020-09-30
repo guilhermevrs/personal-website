@@ -5,7 +5,7 @@
   "main": "n/a",
   "scripts": {
     "develop": "npm run clean && gatsby develop",
-    "build": "npm run clean && gatsby build",
+    "build": "npm run clean && GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "deploy": "npm build && gh-pages -d public -b master",
     "clean": "rimraf .cache public",
     "flow": "flow",
@@ -57,6 +57,7 @@
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-react-svg": "^3.0.0",
+    "gatsby-plugin-robots-txt": "^1.5.3",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-plugin-sitemap": "^2.0.11",
