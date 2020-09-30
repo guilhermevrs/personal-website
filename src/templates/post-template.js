@@ -19,7 +19,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} keywords={postKeywords}>
-      <Post post={data.thisPost} otherLanguages={data.otherLanguages} />
+      <Post post={data.thisPost} url={data.site.siteMetadata.url} otherLanguages={data.otherLanguages} />
     </Layout>
   );
 };

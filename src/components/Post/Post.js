@@ -6,7 +6,7 @@ import Meta from "./Meta";
 import VersionSwitcher from "../VersionSwitcher";
 import styles from "./Post.module.scss";
 
-const Post = ({ post, otherLanguages = null }) => {
+const Post = ({ post, url, otherLanguages = null }) => {
   const { title, date, lang = null, lastUpdate = null } = post.frontmatter;
 
   const { body } = post;
@@ -30,7 +30,7 @@ const Post = ({ post, otherLanguages = null }) => {
       </div>
 
       <div className={styles["post__footer"]}>
-        <Meta date={date} lang={lang} lastUpdate={lastUpdate} />
+        <Meta date={date} lang={lang} share={`${url}${post.fields.slug}`} lastUpdate={lastUpdate} />
         <Author lang={lang} />
       </div>
     </div>
