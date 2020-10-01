@@ -6,8 +6,6 @@ import Meta from "./Meta";
 import VersionSwitcher from "../VersionSwitcher";
 import styles from "./Post.module.scss";
 
-import Helmet from 'react-helmet';
-
 const Post = ({ post, url, otherLanguages = null }) => {
   const { title, date, lang = null, lastUpdate = null } = post.frontmatter;
 
@@ -22,13 +20,6 @@ const Post = ({ post, url, otherLanguages = null }) => {
 
   return (
     <div className={styles["post"]}>
-      <Helmet>
-      <meta property='og:title' content={title}/>
-      <meta property='og:image' content={`${url}/${post.frontmatter.ogImage}`}/>
-      <meta property='og:description' content={post.frontmatter.description}/>
-      <meta property='og:url' content={shareUrl}/>
-      </Helmet>
-
       {slug && <div className={styles["versionSwitch"]}>
         <VersionSwitcher lang={lang} versionLinkSuffix={slug}></VersionSwitcher>
       </div>}

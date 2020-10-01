@@ -5,6 +5,7 @@ module.exports = {
   sitemap: '/sitemap.xml',
   title: 'Guilherme Vieira Schwade',
   subtitle: 'Development is much more than just coding',
+  keywords: 'Guilherme Vieira Schwade developer engineering manager guilhermevrs',
   copyright: '© All rights reserved.',
   disqusShortname: 'guilhermevrs-github-io',
   googleAnalyticsId: 'UA-140169580-1',

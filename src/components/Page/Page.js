@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import styles from './Page.module.scss';
 
-const Page = ({ title, children }) => {
+import Helmet from 'react-helmet';
+
+const Page = ({ title, meta, children }) => {
   const pageRef = useRef();
 
   useEffect(() => {
