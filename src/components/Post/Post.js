@@ -24,7 +24,7 @@ const Post = ({ post, url, otherLanguages = null }) => {
     <div className={styles["post"]}>
       <Helmet>
       <meta property='og:title' content={title}/>
-      <meta property='og:image' content={`//${post.frontmatter.ogImage}`}/>
+      <meta property='og:image' content={`${url}/${post.frontmatter.ogImage}`}/>
       <meta property='og:description' content={post.frontmatter.description}/>
       <meta property='og:url' content={shareUrl}/>
       </Helmet>
