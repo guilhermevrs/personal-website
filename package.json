@@ -86,8 +86,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-share": "^4.3.0",
-    "remark-emoji": "^2.1.0",
-    "share": "^0.7.40"
+    "remark-emoji": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.0.0",
