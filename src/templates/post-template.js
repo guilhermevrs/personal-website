@@ -6,21 +6,31 @@ import Post from '../components/Post';
 const PostTemplate = ({ data }) => {
   const {
     title: siteTitle,
-    subtitle: siteSubtitle
+    subtitle: siteSubtitle,
+    url: siteUrl
   } = data.site.siteMetadata;
 
   const {
     title: postTitle,
     description: postDescription,
     keywords: postKeywords,
-    lang
+    lang,
+    ogImage: openGraphImage
   } = data.thisPost.frontmatter;
 
   const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
 
+  const openGraphMeta = {
+    title: `${postTitle} - ${siteTitle}`,
+    siteUrl,
+    description: metaDescription,
+    slug: data.thisPost.fields.slug,
+    image: openGraphImage
+  };
+
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} lang={lang} description={metaDescription} keywords={postKeywords}>
-      <Post post={data.thisPost} url={data.site.siteMetadata.url} otherLanguages={data.otherLanguages} />
+    <Layout ogMeta={openGraphMeta} title={`${postTitle} - ${siteTitle}`} lang={lang} description={metaDescription} keywords={postKeywords}>
+      <Post post={data.thisPost} otherLanguages={data.otherLanguages} />
     </Layout>
   );
 };

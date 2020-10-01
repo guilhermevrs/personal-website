@@ -3,6 +3,7 @@ title: "Sobre mim"
 template: "page"
 lang: "pt"
 slug: "/pages/sobre-mim"
+keywords: "Guilherme Vieira Schwade developer engineering manager about guilhermevrs"
 ---
 
 Olá!  

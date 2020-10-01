@@ -2,6 +2,7 @@
 title: "About me"
 template: "page"
 slug: "/pages/about"
+keywords: "Guilherme Vieira Schwade developer engineering manager about guilhermevrs"
 ---
 
 Hi there!  
