@@ -16,7 +16,9 @@ type Props = {
 const IndexTemplate = ({ data, pageContext }: Props) => {
   const {
     title: siteTitle,
-    subtitle: siteSubtitle
+    subtitle: siteSubtitle,
+    keywords: siteKeywords,
+    url: siteUrl
   } = data.site.siteMetadata;
 
   const {
@@ -37,8 +39,16 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
     }
   }
 
+  const openGraphMeta = {
+    title: pageTitle,
+    siteUrl,
+    description: siteSubtitle,
+    slug: '',
+    image: 'about.jpeg'
+  };
+
   return (
-    <Layout title={pageTitle} description={siteSubtitle}>
+    <Layout ogMeta={openGraphMeta} title={pageTitle} keywords={siteKeywords} description={siteSubtitle}>
       <Sidebar isIndex lang={lang} versionLinkSuffix="/" />
       <Page>
         {notFoundCmp}
@@ -60,7 +70,9 @@ export const query = graphql`
     site {
       siteMetadata {
         title
-        subtitle
+        subtitle,
+        keywords,
+        url
       }
     }
     allMdx(

@@ -9,12 +9,14 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 const PageTemplate = ({ data, pageContext }) => {
   const {
     title: siteTitle,
-    subtitle: siteSubtitle
+    subtitle: siteSubtitle,
+    url: siteUrl
   } = data.site.siteMetadata;
 
   const {
     title: pageTitle,
-    description: pageDescription
+    description: pageDescription,
+    keywords: pageKeywords
   } = data.thisPost.frontmatter;
 
   const { lang } = pageContext;
@@ -22,8 +24,16 @@ const PageTemplate = ({ data, pageContext }) => {
 
   const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
 
+  const openGraphMeta = {
+    title: `${pageTitle} - ${siteTitle}`,
+    siteUrl,
+    description: metaDescription,
+    slug: data.thisPost.fields.slug,
+    image: 'about.jpeg'
+  };
+
   return (
-    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription}>
+    <Layout ogMeta={openGraphMeta} title={`${pageTitle} - ${siteTitle}`} keywords={pageKeywords} description={metaDescription}>
       <Sidebar lang={lang} versionLinkSuffix={slug} />
       <Page title={pageTitle}>
         <MDXRenderer>{data.thisPost.body}</MDXRenderer>
@@ -38,16 +48,21 @@ export const query = graphql`
       siteMetadata {
         title
         subtitle
+        url
       }
     }
     thisPost: mdx(fields: { slug: { eq: $slug } }, frontmatter: { lang: { eq: $lang } }) {
       id
       body
+      fields {
+        slug
+      }
       frontmatter {
         title
         date
         description
         lang
+        keywords
       }
     }
     otherLanguages: mdx(frontmatter: {lang: {ne: $lang}}, fileAbsolutePath: {glob: $fileDirName}) {
