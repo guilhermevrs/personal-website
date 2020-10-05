@@ -36,7 +36,8 @@ module.exports = {
     bio: 'Development is much more than just coding',
     contacts: {
       github: 'guilhermevrs',
-      linkedin: 'guilhermeschwade'
+      linkedin: 'guilhermeschwade',
+      stackoverflow: 'https://stackoverflow.com/users/556629/guilhermevrs'
     }
   }
 };
