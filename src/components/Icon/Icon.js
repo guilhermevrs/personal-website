@@ -8,9 +8,7 @@ const Icon = ({ icon }) => {
   }
   return (
     <svg className={className} viewBox={icon.viewBox}>
-      <rect x="35" y="31" width="8" height="8"/>
-      <rect x="35" y="49" width="8" height="40"/>
-      <path d={icon.path} />
+      {icon.paths ? icon.paths.map((path) => <path d={path} />) : <path d={icon.path} />}
     </svg>
   );
 };
