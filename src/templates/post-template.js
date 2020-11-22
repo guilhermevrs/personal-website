@@ -30,7 +30,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout ogMeta={openGraphMeta} title={`${postTitle} - ${siteTitle}`} lang={lang} description={metaDescription} keywords={postKeywords}>
-      <Post post={data.thisPost} otherLanguages={data.otherLanguages} />
+      <Post post={data.thisPost} url={siteUrl} otherLanguages={data.otherLanguages} />
     </Layout>
   );
 };

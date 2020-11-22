@@ -13,10 +13,10 @@ const Post = ({ post, url, otherLanguages = null }) => {
   const slug = otherLanguages ? otherLanguages.fields.slug : null;
 
   const allArticlesProp = lang
-    ? { to: `/${lang}`, text: "Lista de Artigos" }
+    ? { to: `/${lang}/`, text: "Lista de Artigos" }
     : { to: "/", text: "All Articles" };
 
-  const shareUrl = `${url}${allArticlesProp.to}${post.fields.slug}`;
+  const shareUrl = `${url}${allArticlesProp.to}${post.fields.slug.replace(/^\//, '')}`;
 
   return (
     <div className={styles["post"]}>
