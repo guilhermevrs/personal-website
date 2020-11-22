@@ -7,8 +7,13 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import Mermaid from '../Mermaid';
 import Quote from '../Quote';
+import CustomImage from '../CustomImage';
 
-const shortcodes = { Mermaid, Quote };
+const shortcodes = { 
+  Mermaid, 
+  Quote,
+  img: CustomImage
+};
 
 const pluralizedTime = (lang, minutes) => {
   const singular = lang === 'pt'? 'minuto' : 'minute';

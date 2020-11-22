@@ -117,11 +117,10 @@ module.exports = {
           },
           {
             resolve: 'gatsby-remark-images',
-            options: { maxWidth: 960 }
-          },
-          {
-            resolve: 'gatsby-remark-figure-caption',
-            options: { figureClassName: 'md-figure' },
+            options: {
+              maxWidth: 960,
+              showCaptions: ['alt']
+            }
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
