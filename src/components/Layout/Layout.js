@@ -16,7 +16,7 @@ const Layout = ({ children, ogMeta, title, description, keywords }) => {
         <meta property='og:title' content={ogMeta.title}/>
         <meta property='og:image' content={`${ogMeta.siteUrl}/${ogMeta.image}`}/>
         <meta property='og:description' content={ogMeta.description}/>
-        <meta property='og:url' content={`${ogMeta.siteUrl}/${ogMeta.slug}`}/>
+        <meta property='og:url' content={`${ogMeta.siteUrl}${ogMeta.slug}`}/>
       </Helmet> }
 
       {children}
