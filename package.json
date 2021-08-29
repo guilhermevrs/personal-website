@@ -4,7 +4,7 @@
   "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
   "main": "n/a",
   "scripts": {
-    "develop": "npm run clean && gatsby develop",
+    "develop": "npm run clean && gatsby develop -H 0.0.0.0",
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "deploy": "npm build && gh-pages -d public -b master",
     "clean": "rimraf .cache public",
