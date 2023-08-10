@@ -1,0 +1,53 @@
+- id: search_placeholder
+  translation: Busque e tecle enter ...
+
+- id: search_result_for
+  translation: Resultados para
+
+- id: you_may_also_like
+  translation: Artigos relacionados
+
+- id: recent_post
+  translation: Postagens recentes
+
+- id: written_by
+  translation: Escrito por
+
+- id: read_more
+  translation: Ler mais
+
+- id: read_article
+  translation: Ver artigo
+
+- id: showing_posts_from
+  translation: Mostrando mensagens de
+
+- id: home
+  translation: Página inicial
+
+- id: search
+  translation: Buscar
+
+- id: categories
+  translation: Categorias
+
+- id: tags
+  translation: Tags
+
+- id: tag
+  translation: Tag
+
+- id: category
+  translation: Categoria
+
+- id: social
+  translation: Social
+
+- id: copyright-text
+  translation: Desenvolvido por
+
+- id: my_name_is
+  translation: Meu nome é
+
+- id: about_me
+  translation: Sobre mim
