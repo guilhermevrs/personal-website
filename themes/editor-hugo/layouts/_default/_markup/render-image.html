@@ -1,0 +1,44 @@
+{{- $respSizes := slice "320" "640" "960" "1280" "1600" "1920" -}}
+{{- $src := resources.GetRemote (.Destination | absURL) -}}
+{{- $alt := .Text -}}
+{{- $caption := .Title -}}
+{{- $holder := "GIP" -}}
+{{- $hint := "photo" -}}
+{{- $filter := "box" -}}
+{{/*
+	The `$holder` variable (placeholder) assumes the
+	use of the `head-imgs-css.html` partial
+	template (or similar code); so edit
+	as may be appropriate for your own site.
+	As for the `$hint` and `$filter` items from
+	the shortcode, we have no way to `get` them
+	from the Markdown syntax's attributes so,
+	instead, we set their default values.
+*/}}
+{{- $imgBd5 := md5 $src -}}
+{{- $divClass := print "relative bg-center imgB-" $imgBd5 "-" $holder -}}
+{{- $imgClass := "w-full h-auto animate-fade" -}}
+{{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
+{{- $actualImg := $src.Resize (print "640x jpg " $filter) -}}
+<div class="{{ $divClass }}">
+	<picture>
+		<source type="image/webp" srcset="
+		{{- with $respSizes -}}
+			{{- range $i, $e := . -}}
+				{{- if ge $src.Width . -}}
+					{{- if $i }}, {{ end -}}{{- ($src.Resize (print . "x webp " $hint " " $filter) ).RelPermalink }} {{ . }}w
+				{{- end -}}
+			{{- end -}}
+		{{- end -}}" sizes="{{ $dataSzes }}" />
+		<source type="image/jpeg" srcset="
+		{{- with $respSizes -}}
+			{{- range $i, $e := . -}}
+				{{- if ge $src.Width . -}}
+					{{- if $i }}, {{ end -}}{{- ($src.Resize (print . "x jpg " $filter) ).RelPermalink }} {{ . }}w
+				{{- end -}}
+			{{- end -}}
+		{{- end -}}" sizes="{{ $dataSzes }}" />
+		<img class="{{ $imgClass }}" src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $alt }}" loading="lazy" />
+	</picture>
+</div>
+{{- with $caption -}}<p class="imghCaption">{{ $caption | $.Page.RenderString }}</p>{{- end }}

@@ -60,8 +60,11 @@ maxAge = "720h"
 
 ############################# Markup ###############################
 [markup]
+defaultMarkdownHandler = "goldmark"
 [markup.goldmark.renderer]
 unsafe = true
+[markup.goldmark.extensions]
+footnote = true
 
 ############################# Plugins ##############################
 

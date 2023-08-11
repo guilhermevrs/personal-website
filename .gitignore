@@ -1,2 +1,5 @@
 .idea
 .DS_Store
+resources/
+resources/_gen/
+hugo_stats.json
