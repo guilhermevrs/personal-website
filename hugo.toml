@@ -115,8 +115,8 @@ custom_script = ""
 # site variables
 [params.variables]
 # color variables
-primary_color = "#c98664"
-secondary_color = "#c98665"
+primary_color = "#1D5D9B"
+secondary_color = "#75C2F6"
 white = "#ffffff"
 black = "#000000"
 dark = "#2B2C2E"
