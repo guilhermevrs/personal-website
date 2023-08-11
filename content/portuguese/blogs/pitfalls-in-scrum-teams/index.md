@@ -38,7 +38,7 @@ Como diz o ditado, um pássaro na mão vale mais que dois voando. Transpondo par
 
 ## 🐵 Armadilha 3: Seguir metodologias cegamente
 
-Talvez, a última armadilha seja um efeito dos termos que usamos. _Sprint_, _Velocity_ e _Story Points_ dão uma noção de competição. Como se você estivesse competindo com outras equipes de Scrum. E não se trata apenas dos termos, mas também dos papéis e cerimônias. Quero dizer, o stand-up diário não é apenas para sair de sua cadeira uma vez por dia :joy:
+Talvez, a última armadilha seja um efeito dos termos que usamos. _Sprint_, _Velocity_ e _Story Points_ dão uma noção de competição. Como se você estivesse competindo com outras equipes de Scrum. E não se trata apenas dos termos, mas também dos papéis e cerimônias. Quero dizer, o stand-up diário não é apenas para sair de sua cadeira uma vez por dia 😂
 
 Quantas vezes você já disse a frase mágica: "Ontem eu fiz isso, hoje eu vou continuar fazendo isso e não estou bloqueado" e imediatamente parou de ouvir os outros? Ou passar uma hora falando sobre o que correu bem e o que poderia ser melhorado, para que no final você tenha uma lista de itens de ação que ninguém segue? Sem entender porque a metodologia é do jeito que é, como você não pode dizer que não é como o macaco na jaula? Ou pior, depois de experiências desagradáveis, simplesmente chegue à conclusão de que a Agile está "quebrado" e não se ajusta à sua equipe.
 
@@ -48,9 +48,9 @@ Não me entenda mal, não estou defendendo seguir a metodologia como o Santo Gra
 
 2. Scrum: A arte de fazer o dobro do trabalho na metade do tempo - por Jeff Sutherland [Amazon link](https://www.amazon.com.br/Scrum-Fazer-Dobro-Trabalho-Metade/dp/8544104517)
 
-Sugiro também que você leia na ordem acima. O primeiro é o próprio guia, excelente para descobrir que você pode estar fazendo coisas em sua equipe que nem sequer estão descritas no guia (como User Stories :open_mouth:). O segundo, é um excelente livro do Sr. Sutherland (sim, o mesmo co-autor do próprio Guia Scrum) onde ele descreve porque cada cerimônia tem seu lugar e qual é o objetivo que você quer alcançar. Mais importante, ele até usa exemplos surpreendentes de mundos tecnológicos e não tecnológicos.
+Sugiro também que você leia na ordem acima. O primeiro é o próprio guia, excelente para descobrir que você pode estar fazendo coisas em sua equipe que nem sequer estão descritas no guia (como User Stories 😮). O segundo, é um excelente livro do Sr. Sutherland (sim, o mesmo co-autor do próprio Guia Scrum) onde ele descreve porque cada cerimônia tem seu lugar e qual é o objetivo que você quer alcançar. Mais importante, ele até usa exemplos surpreendentes de mundos tecnológicos e não tecnológicos.
 
-![Scrum: A arte de fazer o dobro do trabalho na metade do tempo](images/post/pitfalls-scrum-teams/scrum-book-pt.jpg)
+![Scrum: A arte de fazer o dobro do trabalho na metade do tempo](scrum-book-pt.jpg)
 
 ## 🍌 Concluindo...
 

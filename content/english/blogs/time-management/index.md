@@ -26,7 +26,7 @@ It's pretty much that: anything that you see, read or think goes **directly to t
 
 **Tip:** Remember that your brain won't hold the context around each item. Do the effort to **be clear enough on the item description**, otherwise you will have problems later when you will process them.
 
-![Example of my Inbox on Todoist](images/post/time-management/todoist-inbox-en.png "Example of my Inbox on Todoist")
+![Example of my Inbox on Todoist](todoist-inbox-en.png "Example of my Inbox on Todoist")
 
 ## 2) Your inbox needs to be processed every day ⚙️
 
@@ -67,7 +67,7 @@ graph TD;
     id13 & id9 & id6 & id4 & id2-->id14
 */}}
 
-![Time process](images/post/time-management/time-management-mermaid.png "My time management process")
+![Time process](time-management-mermaid.png "My time management process")
 
 A couple of arguments behind the above decisions:
 
@@ -80,7 +80,7 @@ A couple of arguments behind the above decisions:
 
 Remember that you have schedule tasks (and follow-ups) when you processed your inbox? Well, this is the moment where you check the whole list for the day. In here, I usually don't care about the category. **The schedule is there for a reason!** On that case, I advise to **organize your calendar of the day to fit the tasks** considering the meetings you already have, the size of the task and so on.
 
-![A screenshot of my todays list](images/post/time-management/todoist-today.png "A screenshot of my todays list")
+![A screenshot of my todays list](todoist-today.png "A screenshot of my todays list")
 
 ## 4) Tackle the list 💪
 

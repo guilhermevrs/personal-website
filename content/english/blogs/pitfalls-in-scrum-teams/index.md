@@ -38,7 +38,7 @@ As the saying says, a bird in the hand is worth two in the bush. Transposing to 
 
 ## 🐵 Pitfall 3: Blindly following the frameworks
 
-Perhaps, the last pitfall is an effect of the naming we use. _Sprint_, _Velocity_ and _Story Points_ give a notion of competition. Like you were competing with other scrum teams. And it's not only about the terms, but roles and ceremonies as well. I mean, daily stand-up is not only to get out of your chair once per day :joy:
+Perhaps, the last pitfall is an effect of the naming we use. _Sprint_, _Velocity_ and _Story Points_ give a notion of competition. Like you were competing with other scrum teams. And it's not only about the terms, but roles and ceremonies as well. I mean, daily stand-up is not only to get out of your chair once per day 😂
 
 How many times have you said the magical "Yesterday I did that, today I will continue doing that and I am not blocked" and immediately stop listening to the others? Or spending an hour talking about what went well and what could be improved, so that in the end, you have a list of action items that nobody follows? Without understanding why the framework is the way it is, how can't you say you are not like the monkey in the cage? Or worse, after unpleasant experiences, simply get to the conclusion that the framework is "broken" and it doesn't fit to your team.
 
@@ -48,9 +48,9 @@ Don't get me wrong, I am not advocating to follow the framework like the Holy Gr
 
 2. Scrum: The Art of Doing Twice the Work in Half the Time - by Jeff Sutherland [Amazon link](https://www.amazon.com/Scrum-Doing-Twice-Work-Half/dp/038534645X/ref=asc_df_038534645X/?tag=googshopde-21&linkCode=df0&hvadid=310779890634&hvpos=&hvnetw=g&hvrand=2883196745029858640&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044410&hvtargid=pla-432324015266&psc=1&th=1&psc=1&tag=&ref=&adgrpid=70301320708&hvpone=&hvptwo=&hvadid=310779890634&hvpos=&hvnetw=g&hvrand=2883196745029858640&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044410&hvtargid=pla-432324015266)
 
-I also suggest you read it in the order above. The first is the guide itself, excellent to figure out that you may be doing stuff in your team that is not even described in the guide (like User Stories :open_mouth:). The second, is an excellent book from Mr. Sutherland (yes, the same co-author of the Scrum Guide itself) where he describes why each ceremony has its place and what is the goal you want to achieve. More important, it even uses amazing examples from tech and non-tech worlds.
+I also suggest you read it in the order above. The first is the guide itself, excellent to figure out that you may be doing stuff in your team that is not even described in the guide (like User Stories 😮). The second, is an excellent book from Mr. Sutherland (yes, the same co-author of the Scrum Guide itself) where he describes why each ceremony has its place and what is the goal you want to achieve. More important, it even uses amazing examples from tech and non-tech worlds.
 
-![Scrum: The Art of Doing Twice the Work in Half the Time](images/post/pitfalls-scrum-teams/scrum-book.jpg)
+![Scrum: The Art of Doing Twice the Work in Half the Time](scrum-book.jpg)
 
 ## 🍌 In summary
 

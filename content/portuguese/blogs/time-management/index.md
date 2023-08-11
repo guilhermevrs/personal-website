@@ -25,7 +25,7 @@ Esse é o mais impactante para mim. Basicamente, isso é uma afirmação que **n
 
 **Dica:** Lembre-se que o seu cérebro não vai guardar o contexto de cada item na Inbox. Faça o esforço de **ser claro o suficiente na descrição dos items**, senão você terá problemas mais tarde quando você vai processá-los.
 
-![Minha Inbox hoje](images/post/time-management/todoist-inbox-en.png "Minha Inbox hoje")
+![Minha Inbox hoje](todoist-inbox-en.png "Minha Inbox hoje")
 
 ## 2) Sua Inbox precisa ser processada todos os dias ⚙️
 
@@ -66,7 +66,7 @@ graph TD;
     id13 & id9 & id6 & id4 & id2-->id14
 */}}
 
-![Processo de gerenciamento de tempo](images/post/time-management/time-management-mermaid-pt.png "Meu processo de gerenciamento de tempo")
+![Processo de gerenciamento de tempo](time-management-mermaid-pt.png "Meu processo de gerenciamento de tempo")
 
 Alguns comentários sobre as decisões acima:
 
@@ -79,7 +79,7 @@ Alguns comentários sobre as decisões acima:
 
 Lembra que na etapa anterior, você agendou tarefas (e delegações) para os items da sua inbox? Bem, agora é o momento quando você confere a lista do dia. Aqui, eu normalmente não dou a mínima para a categoria. **A tarefa foi agendada pour uma rasão!** Nesse caso, eu aconselho a **organizar a sua agenda do dia para ter um tempo para essas tarefas** considerando reuniões previamente agendadas, o tamanho das tarefas, etc.
 
-![A minha lista de tarefas desse dia](images/post/time-management/todoist-today.png "A minha lista de tarefas desse dia")
+![A minha lista de tarefas desse dia](todoist-today.png "A minha lista de tarefas desse dia")
 
 ## 4) Hora do trabalho 💪
 
