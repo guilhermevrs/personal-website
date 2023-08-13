@@ -1,9 +1,7 @@
-node_modules/
-.cache/
-public/
-npm-debug.log
-.eslintcache
-.gatsby-context.js
 .idea
-gatsby-starter-lumen.iml
 .DS_Store
+resources/
+resources/_gen/
+hugo_stats.json
+.hugo_build.lock
+public
