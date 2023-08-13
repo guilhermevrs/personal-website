@@ -1,0 +1,35 @@
+.relative {
+	position: relative;
+}
+.bg-center {
+	background-position: center;
+}
+.w-full {
+	width: 100%;
+}
+.h-auto {
+	height: auto;
+}
+@keyframes fadeIn {
+ 0% {
+	 opacity: 0;
+ }
+ to {
+	 opacity: 1;
+ }
+}
+.animate-fade {
+	animation: fadeIn 750ms ease-in-out;
+}
+.imghCaption {
+	padding: 0;
+	margin-block-start: 0.5em;
+	line-height: 1.375;
+	font-size: 0.75em;
+	text-align: center;
+}
+.content {
+  a {
+    text-decoration: underline;
+  }
+}

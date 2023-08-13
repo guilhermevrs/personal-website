@@ -1,0 +1,238 @@
+######################## default configuration ####################
+baseURL = "https://guilhermevrs.me"
+title = "Guilherme Schwade - Personal blog"
+theme = "editor-hugo"
+# Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
+timeZone = "Europe/Paris"
+# post pagination
+paginate = 6 # see https://gohugo.io/extras/pagination/
+# post excerpt
+summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
+# google analytics
+googleAnalytics = "UA-140169580-1" # example: UA-123456-78, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
+# disqus short name
+# disqusShortname = "themefisher-template" # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+# disable language
+disableLanguages = [
+    "fr",
+] # example: ["fr"] for disable french language. see https://gohugo.io/content-management/multilingual/
+hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
+
+
+############################# Build ##############################
+[build]
+noJSConfigInAssets = false
+useResourceCacheWhen = 'fallback'
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = 'assets/.*\.(js|ts|jsx|tsx)'
+target = '(js|scripts|javascript)'
+[[build.cachebusters]]
+source = 'assets/.*\.(css|sass|scss)$'
+target = '(css|styles|scss|sass)'
+[[build.cachebusters]]
+source = 'assets/.*\.(.*)$'
+target = '$1'
+
+
+############################# Outputs ##############################
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+############################# Imaging ##############################
+[imaging]
+# See https://github.com/disintegration/imaging
+# Default JPEG or WebP quality setting. Default is 75.
+quality = 90
+resampleFilter = "lanczos"
+
+############################# Caches ###############################
+[caches]
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[caches.assets]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+
+############################# Markup ###############################
+[markup]
+defaultMarkdownHandler = "goldmark"
+[markup.goldmark.renderer]
+unsafe = true
+[markup.goldmark.extensions]
+footnote = true
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"
+attributes = "crossorigin='anonymous' defer='defer' data-search-pseudo-elements"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+
+#################### default parameters ################################
+[params]
+favicon = "images/logo-sm.svg"
+logo_text = "Gui"
+logo = "images/logo.svg"
+logo_height = "26px"
+logo_rotate = true
+# Meta data
+description = "Guilherme Vieira Schwade's personal blog"
+author = "guilhermevrs"
+# contact info
+email = "guilhermevrs@gmail.com"
+# contact form action
+# contact_form_action = "#" # contact form works with https://formspree.io
+# Search
+search = true
+# Main section
+mainSections = ["posts"]
+# custom script on header
+custom_script = ""
+
+# site variables
+[params.variables]
+# color variables
+primary_color = "#1D5D9B"
+secondary_color = "#75C2F6"
+white = "#ffffff"
+black = "#000000"
+dark = "#2B2C2E"
+gray = "#66676d"
+light = "#a8aab2"
+
+# font-size variables
+h1 = "68px"
+h1_lg = "52px"
+h1_md = "40px"
+h2 = "42px"
+h2_md = "36px"
+h3 = "32px"
+h3_md = "28px"
+h4 = "24px"
+h5 = "18px"
+h6 = "16px"
+
+# font variable
+# Give your font name from google font. add font weight using ":wght@" and separate by ";"
+# example: "Work Sans:wght@400;600;700"
+primary_font = "Lora:wght@500;600"
+secondary_font = "Work Sans:wght@400;500;600"
+icon_font = "Font Awesome 5 Free"
+
+# Preloader
+[params.preloader]
+enable = false
+preloader = "" # use jpg, png, svg or gif format.
+
+# Subscription
+[params.subscription]
+enable = false
+# mailchimp subsciption
+# mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
+# mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074"                                                           # replace this code with yours
+
+# cookies
+[params.cookies]
+enable = false
+expire_days = 2
+
+
+######################## sidebar widgets #########################
+[params.widgets]
+sidebar = ["about-me", "recent-post"]
+# available widget : search,about-me,authors,categories,tags,recent-post,social,promotion,subscription
+
+############################# social site ########################
+[[params.social]]
+title = "LI"
+icon = "fab fa-linkedin"                               # Fhemify icon : https://themify.me/themify-icons
+link = "https://www.linkedin.com/in/guilhermeschwade/"
+
+[[params.social]]
+title = "GH"
+icon = "fab fa-github"                   # Fontawesome icon pack : https://fontawesome.com/icons/
+link = "https://github.com/guilhermevrs"
+
+[[params.social]]
+title = "SO"
+icon = "fab fa-stack-overflow"                               # Fontawesome icon pack : https://fontawesome.com/icons/
+link = "https://stackoverflow.com/users/556629/guilhermevrs"
+
+
+################################### English language #####################################
+[Languages.en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+# copyright
+copyright = "Copyright &copy;2021 <br> Designed &amp; Developed by [Gethugothemes](https://gethugothemes.com/)"
+
+
+############# English navigation ##############
+# main menu
+[[Languages.en.menu.main]]
+name = "Home"
+url = ""
+weight = 1
+
+[[Languages.en.menu.main]]
+name = "About"
+url = "about/"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "Posts"
+url = "posts/"
+weight = 3
+
+################################### Portuguese language #####################################
+[Languages.pt]
+languageName = "Pt"
+languageCode = "pt-br"
+contentDir = "content/portuguese"
+weight = 2
+# copyright
+copyright = "Direitos autorais &copy;2021 <br> Desenvolvido por [Gethugothemes](https://gethugothemes.com/)"
+
+
+############# Portuguese navigation ##############
+# main menu
+# main menu
+[[Languages.pt.menu.main]]
+name = "Página inicial"
+url = ""
+weight = 1
+
+[[Languages.pt.menu.main]]
+name = "Sobre mim"
+url = "about/"
+weight = 2
+
+[[Languages.pt.menu.main]]
+name = "Posts"
+url = "posts/"
+weight = 3
