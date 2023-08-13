@@ -4,10 +4,10 @@ date: 2021-02-13T10:00:00.169Z
 draft: false
 images:
   - "images/post/glue-work-and-expand-your-graph/cover.jpg"
-categories: ["Software engineering"]
+categories: ["Career"]
 tags:
   - "Senior eng"
-  - "Career"
+  - "IC"
 ---
 
 The theme that I always intend to write about is that software engineering is much more than code. Of course coding is a great deal of it (otherwise I wouldn't be interested in), but one cannot neglect the whole ecosystem around it. After reading [the article](https://noidea.dog/glue) and [watching the talk](https://www.youtube.com/watch?v=KClAPipnKqw) from Tanya Reilly ([@whereistanya](https://twitter.com/whereistanya)), I tend to believe she would agree with that.
