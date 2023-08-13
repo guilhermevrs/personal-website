@@ -108,7 +108,7 @@ email = "guilhermevrs@gmail.com"
 # Search
 search = true
 # Main section
-mainSections = ["blogs"]
+mainSections = ["posts"]
 # custom script on header
 custom_script = ""
 
@@ -205,8 +205,8 @@ url = "about/"
 weight = 2
 
 [[Languages.en.menu.main]]
-name = "Blogs"
-url = "blogs/"
+name = "Posts"
+url = "posts/"
 weight = 3
 
 ################################### Portuguese language #####################################
@@ -233,6 +233,6 @@ url = "about/"
 weight = 2
 
 [[Languages.pt.menu.main]]
-name = "Blogs"
-url = "blogs/"
+name = "Posts"
+url = "posts/"
 weight = 3
