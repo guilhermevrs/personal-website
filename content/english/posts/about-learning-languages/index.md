@@ -4,9 +4,10 @@ date: 2020-11-23T10:00:00.169Z
 draft: false
 images:
   - "images/post/about-learning-languages/cover.png"
-categories: ["Coding"]
+categories: ["Learning"]
 tags:
   - "Learning"
+  - "Coding"
 ---
 
 _Sprichst du Kotlin?_

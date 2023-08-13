@@ -5,7 +5,7 @@ draft: false
 images:
   - "images/post/pitfalls-scrum-teams/jamie-haughton-Z05GiksmqYU-unsplash.jpg"
 categories: ["Agile"]
-tags: ["Agile"]
+tags: ["Agile", "Scrum"]
 ---
 
 Já alguma vez ouviu falar da experiência dos cinco macacos? Se não, não vou a reescrever aqui, visto que há vários exemplos na internet (como [neste artigo](https://atitudereflexiva.wordpress.com/2020/04/02/a-experiencia-dos-cinco-macacos/)). Conclusão: após uma dinâmica específica e falta de comunicação adequada, a experiência acaba com cinco macacos numa jaula, evitando o que eles realmente querem - comer um cacho de bananas - mas sem saber exatamente porquê. Apesar de não haver provas suficientes que demonstrem que esta experiência realmente aconteceu, aposto que você pode relacionar com alguns exemplos no trabalho.

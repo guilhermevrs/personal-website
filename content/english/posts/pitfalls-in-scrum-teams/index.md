@@ -5,7 +5,7 @@ draft: false
 images:
   - "images/post/pitfalls-scrum-teams/jamie-haughton-Z05GiksmqYU-unsplash.jpg"
 categories: ["Agile"]
-tags: ["Agile"]
+tags: ["Agile", "Scrum"]
 ---
 
 Have you ever heard about the five monkeys experiment? If not, I am not going to reproduce it in here, but you can find several examples on the net already (like [in this article](https://www.linkedin.com/pulse/five-monkeys-experiment-john-stepper/)). Bottom line of the whole thing: after a specific dynamic and lack of proper communication, it ends up with five monkeys in a cage, avoiding what they really want -- to eat a bunch of bananas -- but not knowing exactly why. Even though there is not enough evidence that shows that this experiment really happened, I bet you can relate with some examples at work.

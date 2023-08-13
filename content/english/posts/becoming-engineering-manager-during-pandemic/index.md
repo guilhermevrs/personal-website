@@ -6,7 +6,7 @@ images:
   - "images/post/thoughts-eng-manager/cover.jpg"
 categories: ["Leadership"]
 tags:
-  - "Engineering manager"
+  - "Management"
   - "Leadership"
 ---
 

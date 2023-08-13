@@ -5,8 +5,8 @@ images:
   - "images/post/time-management/cover.png"
 date: 2020-08-25T10:00:00.169Z
 description: "Este artigo descreve como eu gerencio meu tempo"
-tags: ["Gerenciamento de tempo"]
-categories: ["Gerenciamento de tempo"]
+tags: ["Time Management"]
+categories: ["Time Management"]
 ---
 
 O dia começa: uma lista enorme de e-mails e conversas não lidas do dia anterior espera por você. Post-its e lembretes que você escreveu na semana passada ainda precisam ser executados e uma notificação do seu calendário informa que você já está atrasado para uma reunião. Você decide prestar atenção nela (senão você não vai conseguir seguir o assunto) e, durante esse tempo, a lista de items continua a crescer... Eu perdi a conta de quantas vezes isso aconteceu comigo.

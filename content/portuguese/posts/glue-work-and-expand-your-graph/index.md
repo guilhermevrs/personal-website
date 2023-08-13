@@ -7,6 +7,7 @@ images:
 categories: ["Software engineering"]
 tags:
   - "Senior eng"
+  - "Career"
 ---
 
 O tema sobre o qual sempre pretendo escrever nesse blog é que engenharia de software é muito mais do que código. É claro que boa parte disso é programação (caso contrário eu não estaria interessado), mas não se pode negligenciar todo o ecossistema ao seu redor. Depois de ler [o artigo](https://noidea.dog/glue) e [assistir à palestra](https://www.youtube.com/watch?v=KClAPipnKqw) de Tanya Reilly ([@whereistanya](https://twitter.com/whereistanya)), eu acho que ela concorda com isso.
