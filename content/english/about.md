@@ -14,7 +14,8 @@ partners:
   enable: false
 ---
 
-👋 Hi there! I am Guilherme, but you can call me Gui.
+👋 Hi there!  
+I am Guilherme, but you can call me Gui.
 
 After working for quite a while now, I came to the conclusion that the development world is not limited to algorithms and code. Of course it's a big part of it, but one shouldn't neglect all the areas that orbit around it. As in Astronomy, planets are not the only subject we talk about and it shares the spotlight with stars, galaxies, black holes and many others. Development is also about performance, usability, communication, ways of working with others (humans or not) and many more.
 

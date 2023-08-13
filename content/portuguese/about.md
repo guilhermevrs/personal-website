@@ -8,7 +8,7 @@ layout: "about"
 name: "Guilherme Schwade"
 email: "guilhermevrs@gmail.com"
 image: "images/author.png"
-summary: "Development is much more than just coding."
+summary: "Engenharia de software é muito mais que código."
 
 partners:
   enable: false
