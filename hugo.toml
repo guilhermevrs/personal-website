@@ -57,6 +57,9 @@ maxAge = "720h"
 dir = ":resourceDir/_gen"
 maxAge = "720h"
 
+############################ Minify ###############################
+[minify]
+disableCSS = true
 
 ############################# Markup ###############################
 [markup]
